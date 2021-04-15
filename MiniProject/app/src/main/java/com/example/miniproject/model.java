@@ -1,16 +1,16 @@
 package com.example.miniproject;
 
 public class model {
-    String config,name,old,other,phone,ram;
+    String config,name,old,price,phone,ram;
 
     public model() {
     }
 
-    public model(String config, String name, String old, String other, String phone, String ram) {
+    public model(String config, String name, String old, String price, String phone, String ram) {
         this.config = config;
         this.name = name;
         this.old = old;
-        this.other = other;
+        this.price = price;
         this.phone = phone;
         this.ram = ram;
     }
@@ -39,12 +39,12 @@ public class model {
         this.old = old;
     }
 
-    public String getOther() {
-        return other;
+    public String getPrice() {
+        return price;
     }
 
-    public void setOther(String other) {
-        this.other = other;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getPhone() {

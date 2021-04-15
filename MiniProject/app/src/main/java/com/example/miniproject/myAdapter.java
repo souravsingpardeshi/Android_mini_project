@@ -24,12 +24,12 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myviewhol
     protected void onBindViewHolder(@NonNull myviewholder holder, int position, @NonNull model model) {
         holder.nametext.setText(model.getConfig());
         holder.old.setText(model.getOld());
-        holder.price.setText(model.getOther());
+        holder.price.setText(model.getPrice());
         holder.nametext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AppCompatActivity activity=(AppCompatActivity)view.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new descfragment(model.getConfig(),model.getOld(),model.getOther())).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new descfragment(model.getConfig(),model.getOld(),model.getPrice())).addToBackStack(null).commit();
             }
         });
     }

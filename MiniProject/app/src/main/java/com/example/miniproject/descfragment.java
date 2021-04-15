@@ -17,14 +17,14 @@ public class descfragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
-    String config; String Old;String Other;
+    String config; String Old;String Price;
     public descfragment() {
 
     }
-    public descfragment(String config, String Old,String Other) {
+    public descfragment(String config, String Price,String Other) {
         this.config=config;
         this.Old=Old;
-        this.Other=Other;
+        this.Price=Price;
     }
 
 
@@ -57,7 +57,7 @@ public class descfragment extends Fragment {
         TextView emailholder =view.findViewById(R.id.emailholder);
         nameholder.setText(config);
         courseholder.setText(Old);
-        emailholder.setText(Other);
+        emailholder.setText(Price);
         return view;
     }
     public void onBackPressed()
