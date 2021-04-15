@@ -1,18 +1,18 @@
 package com.example.miniproject;
 
 public class HelperClass {
-    String Name,Phone,Price,Ram,config,old;
+    String Name,config,Ram,Price,Old,Phone;
 
     public HelperClass() {
     }
 
-    public HelperClass(String name, String phone, String price, String ram, String config, String old) {
+    public HelperClass(String name, String config, String ram, String price, String old, String phone) {
         Name = name;
-        Phone = phone;
-        Price = price;
-        Ram = ram;
         this.config = config;
-        this.old = old;
+        Ram = ram;
+        Price = price;
+        Old = old;
+        Phone = phone;
     }
 
     public String getName() {
@@ -23,20 +23,12 @@ public class HelperClass {
         Name = name;
     }
 
-    public String getPhone() {
-        return Phone;
+    public String getConfig() {
+        return config;
     }
 
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
-
-    public String getOther() {
-        return Price;
-    }
-
-    public void setOther(String price) {
-        Price = price;
+    public void setConfig(String config) {
+        this.config = config;
     }
 
     public String getRam() {
@@ -47,19 +39,27 @@ public class HelperClass {
         Ram = ram;
     }
 
-    public String getConfig() {
-        return config;
+    public String getPrice() {
+        return Price;
     }
 
-    public void setConfig(String config) {
-        this.config = config;
+    public void setPrice(String price) {
+        Price = price;
     }
 
     public String getOld() {
-        return old;
+        return Old;
     }
 
     public void setOld(String old) {
-        this.old = old;
+        Old = old;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
     }
 }

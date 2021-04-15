@@ -22,11 +22,11 @@ DatabaseReference reference;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_sell);
         Name = findViewById(R.id.Name);
-        Phone = findViewById(R.id.Phone);
-        Old = findViewById(R.id.Old);
         config = findViewById(R.id.config);
-        Price = findViewById(R.id.Price);
         Ram = findViewById(R.id.Ram);
+        Price = findViewById(R.id.Price);
+        Old = findViewById(R.id.Old);
+        Phone = findViewById(R.id.Phone);
         upload = findViewById(R.id.upload);
        upload.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -34,16 +34,17 @@ DatabaseReference reference;
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
                 String name = Name.getText().toString();
+               String Conf = config.getText().toString();
+               String ram = Ram.getText().toString();
+               String price = Price.getText().toString();
+               String old = Old.getText().toString();
                String phone = Phone.getText().toString();
                if(phone.isEmpty()){
                    Phone.setError("field cannot be empty");
                 return;
                }
-               String old = Old.getText().toString();
-               String price = Price.getText().toString();
-               String Conf = config.getText().toString();
-               String ram = Ram.getText().toString();
-                HelperClass helperClass = new HelperClass(name,Conf,phone,old,price,ram);
+
+                HelperClass helperClass = new HelperClass(name,Conf,ram,price,old,phone);
                 reference.child(phone).setValue(helperClass);
            }
        });
