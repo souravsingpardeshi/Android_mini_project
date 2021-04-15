@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -24,10 +25,11 @@ public class myAdapter extends FirebaseRecyclerAdapter<model,myAdapter.myviewhol
         holder.nametext.setText(model.getConfig());
         holder.old.setText(model.getOld());
         holder.price.setText(model.getOther());
-        holder.old.setOnClickListener(new View.OnClickListener() {
+        holder.nametext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                
+            public void onClick(View view) {
+                AppCompatActivity activity=(AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new descfragment(model.getConfig(),model.getOld(),model.getOther())).addToBackStack(null).commit();
             }
         });
     }

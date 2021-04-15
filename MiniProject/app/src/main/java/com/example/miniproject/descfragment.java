@@ -2,11 +2,13 @@ package com.example.miniproject;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class descfragment extends Fragment {
 
@@ -15,9 +17,14 @@ public class descfragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
-
+    String config; String Old;String Other;
     public descfragment() {
 
+    }
+    public descfragment(String config, String Old,String Other) {
+        this.config=config;
+        this.Old=Old;
+        this.Other=Other;
     }
 
 
@@ -44,6 +51,19 @@ public class descfragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_descfragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_descfragment, container, false);
+        TextView nameholder =view.findViewById(R.id.nameholder);
+        TextView courseholder =view.findViewById(R.id.courseholder);
+        TextView emailholder =view.findViewById(R.id.emailholder);
+        nameholder.setText(config);
+        courseholder.setText(Old);
+        emailholder.setText(Other);
+        return view;
+    }
+    public void onBackPressed()
+    {
+        AppCompatActivity activity=(AppCompatActivity)getContext();
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new recfragment()).addToBackStack(null).commit();
+
     }
 }

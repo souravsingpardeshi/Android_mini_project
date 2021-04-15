@@ -5,10 +5,48 @@
     android:layout_height="match_parent"
     tools:context=".descfragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/imagegholder"
+            android:layout_marginTop="40dp"
+            android:layout_width="240dp"
+            android:background="@drawable/laptop"
+            android:layout_height="228dp"
+            android:src="@color/common_google_signin_btn_text_dark_disabled"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/nameholder"
+            android:text="Candidate Name"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/courseholder"
+            android:text="Candidate Course"
+            android:textSize="25sp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/emailholder"
+            android:text="Candidate Email"
+            android:textSize="25sp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
 </FrameLayout>
