@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "55770320223",
+    "project_id": "rento-eca35",
+    "storage_bucket": "rento-eca35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55770320223:android:f536cb76c85b34e8983aea",
+        "android_client_info": {
+          "package_name": "com.example.miniproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55770320223-4p45d21u770luu298i5m0tlnqvh4s47v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj_ayQZCxO9qJo_7Ko0j65JOwGR-OwsCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55770320223-4p45d21u770luu298i5m0tlnqvh4s47v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
