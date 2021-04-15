@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".descfragment">
 
@@ -21,6 +22,16 @@
             />
 
         <TextView
+            android:id="@+id/textView8"
+            android:layout_width="190dp"
+            android:layout_height="34dp"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="Details"
+            android:textColor="#0E0E0E"
+            android:textSize="30sp" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -29,6 +40,16 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="Expected Price"
+            android:textColor="#070707"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,6 +61,16 @@
             android:textColor="#000"/>
 
         <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="Device Age (in months)"
+            android:textColor="#0C0C0C"
+            android:textSize="30sp" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -47,6 +78,16 @@
             android:text="Candidate Email"
             android:textSize="25sp"
             android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#080909"
+            android:textSize="30sp" />
 
     </LinearLayout>
 </FrameLayout>
