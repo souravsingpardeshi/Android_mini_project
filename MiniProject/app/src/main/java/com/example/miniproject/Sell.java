@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -34,10 +35,30 @@ DatabaseReference reference;
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
                 String name = Name.getText().toString();
+               if(name.isEmpty()){
+                   Name.setError("field cannot be empty");
+                   return;
+               }
                String Conf = config.getText().toString();
+               if(Conf.isEmpty()){
+                   config.setError("field cannot be empty");
+                   return;
+               }
                String ram = Ram.getText().toString();
+               if(ram.isEmpty()){
+                   Ram.setError("field cannot be empty");
+                   return;
+               }
                String price = Price.getText().toString();
+               if(price.isEmpty()){
+                   Price.setError("field cannot be empty");
+                   return;
+               }
                String old = Old.getText().toString();
+               if(old.isEmpty()){
+                   Old.setError("field cannot be empty");
+                   return;
+               }
                String phone = Phone.getText().toString();
                if(phone.isEmpty()){
                    Phone.setError("field cannot be empty");
@@ -46,6 +67,7 @@ DatabaseReference reference;
 
                 HelperClass helperClass = new HelperClass(name,Conf,ram,price,old,phone);
                 reference.child(phone).setValue(helperClass);
+               Toast.makeText(getBaseContext(), "Product Uploaded Successfully ...!" , Toast.LENGTH_SHORT ).show();
            }
        });
 

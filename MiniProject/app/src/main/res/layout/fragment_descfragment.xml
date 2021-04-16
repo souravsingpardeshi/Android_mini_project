@@ -1,103 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".descfragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/teal_200"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imagegholder"
-            android:layout_marginTop="40dp"
             android:layout_width="240dp"
-            android:background="@drawable/laptop"
             android:layout_height="228dp"
-            android:src="@color/common_google_signin_btn_text_dark_disabled"
-            />
+            android:layout_marginTop="40dp"
+            android:background="@drawable/laptop"
+            android:src="@color/common_google_signin_btn_text_dark_disabled" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="190dp"
-            android:layout_height="34dp"
-            android:fontFamily="@font/baloo"
-            android:gravity="center"
-            android:text="Details"
-            android:textColor="#0E0E0E"
-            android:textSize="30sp" />
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/nameholder"
-            android:text="Candidate Name"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="#000"/>
+            android:layout_height="match_parent"
+            android:background="@drawable/background_card"
+            android:elevation="50dp">
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/baloo"
-            android:gravity="center"
-            android:text="Expected Price"
-            android:textColor="#070707"
-            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="190dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="Details"
+                android:textColor="#0E0E0E"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/nameholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/courseholder"
-            android:text="Candidate Course"
-            android:textSize="25sp"
-            android:textColor="#000"/>
+            <TextView
+                android:id="@+id/nameholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:text="Candidate Name"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/det"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/baloo"
-            android:gravity="center"
-            android:text="Device Age (in months)"
-            android:textColor="#0C0C0C"
-            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/det"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textColor="#0C0C0C"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameholder" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/emailholder"
-            android:text="Candidate Email"
-            android:textSize="25sp"
-            android:textColor="#000"/>
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="Expected Price"
+                android:textColor="#070707"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/courseholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/det" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/baloo"
-            android:gravity="center"
-            android:text="Contact"
-            android:textColor="#040303"
-            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/courseholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Candidate Course"
+                android:textColor="#000"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <TextView
-            android:id="@+id/contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/baloo"
-            android:gravity="center"
-            android:text="TextView"
-            android:textColor="#080909"
-            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="Device Age (in months)"
+                android:textColor="#0C0C0C"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/emailholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseholder" />
+
+            <TextView
+                android:id="@+id/emailholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Candidate Email"
+                android:textColor="#000"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="Contact"
+                android:textColor="#040303"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailholder" />
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#080909"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 </FrameLayout>

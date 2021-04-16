@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFCFF"
+    android:background="@color/teal_200"
     tools:context=".recfragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,5 +12,5 @@
         android:id="@+id/review"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#918A8A" />
+        android:background="@color/teal_200" />
 </FrameLayout>
